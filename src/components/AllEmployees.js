@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import employeeService from "../services/EmployeeService";
+import employeeService from "../services/employeeService";
 import { Link } from 'react-router-dom';
 
 class Employees extends Component {
@@ -16,7 +16,6 @@ class Employees extends Component {
         loading: false,
       });
     } catch (error) {
-      console.log(error);
     }
   }
 

@@ -11,7 +11,6 @@ class EmployeeService {
     return this.axios
       .get("/employees")
       .then(({ data: employees }) => employees);
-    console.log("estoy cogiendo employees");
   }
 
   getEmployeeById(id) {

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import employeeService from "../services/EmployeeService";
+import EmployeeService from "../services/employeeService";
 import CardEmployee from "./CardEmployee";
 
 class EmployeeDetail extends Component {
@@ -16,7 +16,7 @@ class EmployeeDetail extends Component {
     } = this.props;
 
     try {
-      const employee = await employeeService.getEmployeeById(id);
+      const employee = await EmployeeService.getEmployeeById(id);
 
       this.setState({
         employee,
