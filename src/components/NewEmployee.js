@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import EmployeeService from "../services/employeeService";
+import Home from '../components/Home';
 
 class NewEmployee extends Component {
   state = {
@@ -30,7 +31,10 @@ class NewEmployee extends Component {
 
   render() {
     return (
-      <div className="form-wrapper">
+      <div>
+        <Home/>
+        <div className="form-wrapper">
+      
         <h1 className="title">New Employee</h1>
 
         <div className="">
@@ -129,6 +133,8 @@ class NewEmployee extends Component {
           </form>
         </div>
       </div>
+      </div>
+      
     );
   }
 }

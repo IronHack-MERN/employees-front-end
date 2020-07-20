@@ -17,8 +17,10 @@ a .navbar-brand{
 }
 
 .card-little{
-  width: 40%;
+  width: 50%;
   margin: 0 auto;
+  background-color: #F8F8F8;
+  margin-bottom: 20%;
 }
 
 .form-wrapper{
@@ -32,4 +34,13 @@ a .navbar-brand{
   float: right;
   margin-top: 10%;
   margin-bottom: 10%;
+}
+
+.wrapper-table{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.employees-table{
+  margin: 0 auto;
 }
