@@ -4,6 +4,7 @@ import EmployeeDetail from './components/EmployeeDetail';
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Home from "./components/Home";
 import NewEmployee from './components/NewEmployee';
+import Header from './components/Header';
 
 import "./App.css";
 
@@ -12,6 +13,7 @@ class App extends Component {
     return (
       <div className="App">
         <BrowserRouter>
+        <Header/>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path='/employees' component={AllEmployees} />

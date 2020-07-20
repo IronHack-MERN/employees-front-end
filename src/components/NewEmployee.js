@@ -30,47 +30,102 @@ class NewEmployee extends Component {
 
   render() {
     return (
-      <div className="wrapper-form">
-        <h1>New Employee</h1>
-        <div className="new-employee-form">
+      <div className="form-wrapper">
+        <h1 className="title">New Employee</h1>
+
+        <div className="">
           <form onSubmit={this.handleFormSubmit}>
-            <label>Name</label>
-            <input
-              type="text"
-              name="name"
-              value={this.state.name}
-              onChange={(e) => this.handleChange(e)}
-            />
+            <div className="field is-horizontal">
+              <div class="field-label">
+                <label className="label is-medium">Name</label>
+              </div>
 
-            <label>Surname</label>
-            <input
-              type="text"
-              name="surname"
-              value={this.state.surname}
-              onChange={(e) => this.handleChange(e)}
-            />
+              <div class="field-body">
+                <div className="field">
+                  <div className="control">
+                    <input
+                      className="input is-medium"
+                      placeholder="John"
+                      type="text"
+                      name="name"
+                      value={this.state.name}
+                      onChange={(e) => this.handleChange(e)}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
 
-            <label>Job</label>
-            <input
-              type="text"
-              name="job"
-              value={this.state.job}
-              onChange={(e) => this.handleChange(e)}
-            />
+            <div className="field is-horizontal">
+              <div class="field-label">
+                <label className="label is-medium">Surname</label>
+              </div>
+              <div class="field-body">
+                <div className="field">
+                  <div className="control">
+                    <input
+                      className="input is-medium"
+                      placeholder="Doe"
+                      type="text"
+                      name="surname"
+                      value={this.state.surname}
+                      onChange={(e) => this.handleChange(e)}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
 
-            <label>Date</label>
-            <input
-              type="text"
-              name="createdAt"
-              value={this.state.createdAt}
-              onChange={(e) => this.handleChange(e)}
-            />
+            <div className="field is-horizontal">
+              <div class="field-label">
+                <label className="label is-medium">Job</label>
+              </div>
+              <div class="field-body">
+                <div className="field">
+                  <div className="control">
+                    <input
+                      className="input is-medium"
+                      placeholder="Developer, Software enginyeer"
+                      type="text"
+                      name="job"
+                      value={this.state.job}
+                      onChange={(e) => this.handleChange(e)}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
 
-            <input
-              className="submit-button"
-              type="submit"
-              value="ADD NEW EMPLOYEE"
-            />
+            <div className="field is-horizontal">
+              <div class="field-label">
+                <label className="label is-medium">Date</label>
+              </div>
+              <div class="field-body">
+                <div className="field">
+                  <div className="control">
+                    <input
+                      className="input is-medium"
+                      placeholder="20-10-2020"
+                      type="text"
+                      name="createdAt"
+                      value={this.state.createdAt}
+                      onChange={(e) => this.handleChange(e)}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field is-horizontal">
+              <div class="field-label"></div>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <button class="button is-primary btn-add-employee">ADD NEW EMPLOYEE</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </form>
         </div>
       </div>

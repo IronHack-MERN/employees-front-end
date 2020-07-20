@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import employeeService from "../services/employeeService";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 class Employees extends Component {
   state = {
@@ -15,27 +15,35 @@ class Employees extends Component {
         employees,
         loading: false,
       });
-    } catch (error) {
-    }
+    } catch (error) {}
   }
 
   render() {
-    console.log("render");
     const { employees, loading } = this.state;
 
     return (
-      <div className="App">
-        <h1>Employees</h1>
-
-        {!loading &&
-          employees.map((employee) => {
-            return (
-              <div key={employee.id}>
-                <Link to={`/employees/${employee.id}`}>{employee.name} {employee.surname}</Link>
-              </div>
-            );
-          })}
-        {loading && <div>loading...</div>}
+      <div className="card card-little">
+      <header className='card-header'>
+        <p className="card-header-title is-centered">
+          List all employees
+        </p>
+      </header>
+      
+        <div className='card-content'>
+          <div className='content'>
+          {!loading &&
+              employees.map((employee) => {
+                return (
+                  <div key={employee.id}>
+                    <Link to={`/employees/${employee.id}`}>
+                      {employee.name} {employee.surname}
+                    </Link>
+                  </div>
+                );
+              })}
+            {loading && <div>loading...</div>}
+          </div>
+        </div>
       </div>
     );
   }
