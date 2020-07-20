@@ -1,7 +1,6 @@
 # EMPLOYEES
 
 ## Demo
-Project with React.js about the Weather in various cities
 ![Demo](./public/employee-form.png)
 
 ## Description
