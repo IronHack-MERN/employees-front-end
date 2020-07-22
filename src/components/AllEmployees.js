@@ -27,7 +27,7 @@ class Employees extends Component {
         <Home />
         <div className="card card-little">
           <header className="card-header">
-            <p className="card-header-title is-centered">List all employees</p>
+            <p className="card-header-title is-centered">ALL EMPLOYEES</p>
           </header>
           <table className="table employees-table" border="1">
             <thead>
@@ -59,9 +59,7 @@ class Employees extends Component {
                         </td>
                         <td>{employee.job}</td>
                         <td>{employee.createAt}</td>
-
-                        
-                        <td><button class="button is-primary is-light btn-add-employee">Edit</button></td>
+                        <td><button class="button is-primary is-light btn-add-employee">Edit</button></td>                        
                         <td><button class="button is-danger is-light btn-add-employee">Delete</button></td>
                       </tr>
                     );
