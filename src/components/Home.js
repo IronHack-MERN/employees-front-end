@@ -30,7 +30,7 @@ class Home extends Component {
           <div className="column">
             <Link
               className="navbar-brand"
-              to="/create"
+              to="/update"
               style={{ textDecoration: "none" }}
             >
               {" "}
@@ -38,6 +38,7 @@ class Home extends Component {
             </Link>{" "}
           </div>
         </div>
+       
       </div>
     );
   }
