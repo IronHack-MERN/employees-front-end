@@ -2,7 +2,6 @@ import React from "react";
 
 const CardEmployee = ({ employee }) => {
   const { name, surname, job, createAt } = employee;
-  console.log({ employee });
   return (
     <div className="card is-centered card-little">
       <div className="media-content">
