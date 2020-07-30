@@ -23,7 +23,7 @@ class Employees extends Component {
     const { employees, loading } = this.state;
 
     return (
-      <div className='wrapper-table'>
+      <div className="wrapper-table">
         <Home />
         <div className="card card-little">
           <header className="card-header">
@@ -42,31 +42,36 @@ class Employees extends Component {
               </tr>
             </thead>
 
-            {/* <Link to={`/employees/${employee.id}`}>
-                            <td></td>
-                            <td>{employee.surname}</td>
-                          </Link> */}
-
-
-                {!loading &&
-                  employees.map((employee) => {
-                    return (
-                      <tr key={employee.id}>
-                      <td>{employee.id}</td>
-                        <td>{employee.name}</td>
-                        <td>
-                        {employee.surname}
-                        </td>
-                        <td>{employee.job}</td>
-                        <td>{employee.createAt}</td>
-                        <td><button class="button is-primary is-light btn-add-employee">Edit</button></td>                        
-                        <td><button class="button is-danger is-light btn-add-employee">Delete</button></td>
-                      </tr>
-                    );
-                  })}
-                {loading && <div>loading...</div>}
-   
+            <tbody>
+              {!loading &&
+                employees.map((employee) => {
+                  return (
+                    <tr key={employee.id}>
+                      <td>
+                        <Link to={`/employees/${employee.id}`}>
+                          {employee.id}
+                        </Link>
+                      </td>
+                      <td>{employee.name}</td>
+                      <td>{employee.surname}</td>
+                      <td>{employee.job}</td>
+                      <td>{employee.createAt}</td>
+                      <td>
+                        <button className="button is-primary is-light btn-add-employee">
+                          <Link to={`/udpate/${employee.id}`}>Edit</Link>
+                        </button>
+                      </td>
+                      <td>
+                        <button className="button is-danger is-light btn-add-employee">
+                          Delete
+                        </button>
+                      </td>
+                    </tr>
+                  );
+                })}
+            </tbody>
           </table>
+          {loading && <div>loading...</div>}
         </div>
       </div>
     );
