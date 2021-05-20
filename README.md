@@ -13,5 +13,6 @@ Project with React.js using an API with java 8 and Spring
 - Html
 - Css
 - Bulma
+. Netlify
 
 Made with :heart: by Elena
